@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  get 'question/index'
 
   resources :questions
 
-  root 'welcome#index'
+  root 'questions#index'
 end
