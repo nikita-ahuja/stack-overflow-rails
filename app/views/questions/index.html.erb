@@ -1,1 +1,20 @@
-<h1>Home</h1>
+<h1> All Questions </h1>
+
+<table>
+  <tr>
+    <th>Question Title</th>
+    <th>More Details</th>
+  </tr>
+
+  <% @questions.each do |question| %>
+    <tr>
+      <td><%= question.question_title %></td>
+      <td><%= question.question_details %></td>
+      <td><%= link_to 'Show', question_path(question) %></td>
+       <td><%= link_to 'Edit', edit_question_path(question) %></td>
+    </tr>
+  <% end %>
+</table>
+<br></br>
+
+<%= link_to 'New Question', new_question_path %>
