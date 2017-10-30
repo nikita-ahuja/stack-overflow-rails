@@ -3,12 +3,14 @@
 <table>
   <tr>
     <th>Question Title</th>
+    <th>|</th>
     <th>More Details</th>
   </tr>
 
   <% @questions.each do |question| %>
     <tr>
       <td><%= question.question_title %></td>
+      <td><%= "" %> </td>
       <td><%= question.question_details %></td>
       <td><%= link_to 'Show', question_path(question) %></td>
        <td><%= link_to 'Edit', edit_question_path(question) %></td>
