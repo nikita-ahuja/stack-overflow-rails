@@ -1,3 +1,5 @@
+<h1> Register here </h1>
+
 <%= form_with scope: @user, url: users_path, local: true do |form| %>
 
 <% if @user.errors.any? %>
@@ -26,12 +28,12 @@
 
 <p>
   <%= form.label :email %><br>
-  <%= form.text_area :email %>
+  <%= form.text_field :email %>
 </p>
 
 <p>
   <%= form.label :password %><br>
-  <%= form.text_area :password %>
+  <%= form.password_field :password %>
 </p>
 
 <p>

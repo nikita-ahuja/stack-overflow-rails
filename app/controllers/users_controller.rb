@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
   def index
+    @user = User.find
+
   end
 
   def new
@@ -15,7 +17,6 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-
 
   private
   def user_params
