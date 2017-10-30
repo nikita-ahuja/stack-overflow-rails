@@ -1,9 +1,9 @@
 class CreateAnswers < ActiveRecord::Migration[5.1]
   def change
     create_table :answers do |t|
-      t.string :answer
-      t.integer :user_id
-      t.integer :question_id
+      t.text :answer
+      t.references :user, foreign_key: true
+      t.references :question, foreign_key: true
 
       t.timestamps
     end
