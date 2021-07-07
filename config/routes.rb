@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'question/index'
+  root 'questions#index'
+
+resources :users do
+  resources :questions
+    resources :answers
 end
+
+end
+
+
+
